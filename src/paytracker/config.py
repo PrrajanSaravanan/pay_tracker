@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    database_url: str = "postgresql://paytracker:paytracker@localhost:5432/paytracker"
+    database_url: str = "postgresql://paytracker:paytracker@localhost:5433/paytracker"
     anthropic_api_key: str = ""
 
 

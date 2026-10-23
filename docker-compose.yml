@@ -6,7 +6,8 @@ services:
       POSTGRES_PASSWORD: paytracker
       POSTGRES_DB: paytracker
     ports:
-      - "5432:5432"
+      # 5433 on the host: a native Windows Postgres may already own 5432.
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
